@@ -1,0 +1,113 @@
+header {
+    background-color: #3F3F3F;
+    color: #fff;
+    position: relative;
+}
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.nav-wrapper .logo {
+    padding: 9px 0;
+
+    font-size: 25px;
+}
+.nav-wrapper .nav-toggle {
+    height: 32px;
+    padding: 5px;
+    width: 45px;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    display: none;
+}
+.nav-wrapper .nav-toggle:hover {
+    background-color: #90C300;
+}
+.nav-wrapper .nav-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+}
+
+.nav-wrapper .nav-items ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+
+}
+.nav-wrapper .nav-items ul li {
+    display: block;
+    height: 100%;
+
+}
+
+.nav-wrapper .nav-items ul li a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    padding: 21px 20px;
+}
+.nav-wrapper .nav-items ul li a.active,
+.nav-wrapper .nav-items ul li a:hover {
+    background-color: #90C300;
+    /* color: #3F3F3F; */
+}
+@media screen and (max-width: 1200px) {
+
+    .nav-wrapper .nav-items ul {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        background-color: #3F3F3F;
+        width: 400px;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        display: none;
+    }
+    .nav-wrapper .nav-items ul li {
+        width: 100%;
+        background-color: #3F3F3F;
+
+    }
+    .nav-wrapper .nav-toggle {
+        display: flex;
+    }
+    .nav-wrapper .nav-items ul.show {
+        display: block;
+    }
+}
+@media screen and (max-width: 576px) {
+    .nav-wrapper .nav-items ul {
+        width: 100%;
+    }
+}
